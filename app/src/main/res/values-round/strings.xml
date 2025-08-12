@@ -1,0 +1,4 @@
+<resources>
+    <string name="hello_world">From the Round world,\nHello, %1$s!</string>
+    <string name="underlined_time"><![CDATA[<u>HH:MM:SS</u>]]></string>
+</resources>

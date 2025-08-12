@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 배경 -->
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 제목 -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saved Data"
+        android:textColor="@color/white"
+        android:textSize="46sp"
+        android:textStyle="bold"
+        android:layout_marginTop="120dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- TableLayout 으로 바꿔서 헤더+구분선 추가 -->
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:stretchColumns="*"
+        android:shrinkColumns="*"
+        android:divider="@android:color/white"
+        android:showDividers="middle"
+        android:dividerPadding="8dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@id/titleText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:dividerHeight="16dp" >
+
+        <TableRow
+            android:layout_marginBottom="8dp"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_weight="3"
+                android:text="Activity"
+                android:paddingLeft="10dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_weight="2"
+                android:text="Time"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_weight="1"
+                android:text="Count"
+                android:paddingRight="20dp"
+                android:gravity="end"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+        </TableRow>
+
+        <TableRow
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            >
+            <TextView
+                android:id="@+id/activityShower"
+                android:layout_weight="3"
+                android:text="Shower"
+                android:textSize="20sp"
+                android:paddingLeft="10dp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/time_shower"
+                android:layout_weight="2"
+                android:text="00:00"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/count_shower"
+                android:layout_weight="1"
+                android:text="2"
+                android:paddingRight="20dp"
+                android:gravity="end"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+        </TableRow>
+
+        <TableRow android:paddingTop="20dp" android:paddingBottom="20dp">
+            <TextView
+                android:id="@+id/activityToothbrushing"
+                android:layout_weight="3"
+                android:text="Brushing Teeth"
+                android:paddingLeft="10dp"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/time_toothbrushing"
+                android:layout_weight="2"
+                android:text="00:00"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/count_toothbrushing"
+                android:layout_weight="1"
+                android:text="3"
+                android:gravity="end"
+                android:paddingRight="20dp"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+        </TableRow>
+
+        <TableRow android:paddingTop="20dp" android:paddingBottom="20dp">
+            <TextView
+                android:id="@+id/activityWashingHands"
+                android:layout_weight="3"
+                android:text="Washing Hands"
+                android:paddingLeft="10dp"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/time_washing_hands"
+                android:layout_weight="2"
+                android:text="00:00"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/count_washing_hands"
+                android:layout_weight="1"
+                android:text="10"
+                android:gravity="end"
+                android:paddingRight="20dp"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+        </TableRow>
+
+        <TableRow android:paddingTop="20dp" android:paddingBottom="20dp">
+            <TextView
+                android:id="@+id/activityVacuumCleaner"
+                android:layout_weight="3"
+                android:text="Vacuum Cleaner"
+                android:paddingLeft="10dp"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/time_vacuum_cleaner"
+                android:layout_weight="2"
+                android:text="00:00"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/count_vacuum_cleaner"
+                android:layout_weight="1"
+                android:text="3"
+                android:gravity="end"
+                android:paddingRight="20dp"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+        </TableRow>
+
+        <TableRow android:paddingTop="20dp" android:paddingBottom="20dp">
+            <TextView
+                android:id="@+id/activityWiping"
+                android:layout_weight="3"
+                android:text="Wiping"
+                android:paddingLeft="10dp"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/time_wiping"
+                android:layout_weight="2"
+                android:text="00:00"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/count_wiping"
+                android:layout_weight="1"
+                android:text="10"
+                android:gravity="end"
+                android:paddingRight="20dp"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+        </TableRow>
+
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
